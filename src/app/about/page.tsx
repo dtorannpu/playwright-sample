@@ -1,10 +1,13 @@
-import { Link } from "@/components/ui/Link";
+import H1 from "@/components/ui/H1";
+import Link from "@/components/ui/Link";
 
-export default function Page() {
+const Page = () => {
   return (
     <div>
-      <h1>About</h1>
+      <H1>About</H1>
       <Link href="/">Home</Link>
     </div>
   );
-}
+};
+
+export default Page;

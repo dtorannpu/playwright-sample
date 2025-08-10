@@ -5,11 +5,7 @@ type Props = React.ComponentProps<typeof NextLink> & {
   children: React.ReactNode;
 };
 
-export const Link: React.FC<Props> = ({
-  children,
-  className = "",
-  ...props
-}) => {
+const Link = ({ children, className = "", ...props }: Props) => {
   return (
     <NextLink
       className={`text-blue-500 underline transition-colors duration-200 hover:text-blue-700 ${className}`}
@@ -19,3 +15,5 @@ export const Link: React.FC<Props> = ({
     </NextLink>
   );
 };
+
+export default Link;
