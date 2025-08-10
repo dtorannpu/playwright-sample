@@ -9,6 +9,8 @@ test("should navigate to the about page", async ({ page }) => {
   await expect(page).toHaveURL("http://localhost:3000/about");
   // The new page should contain an h1 with "About"
   await expect(page.locator("h1")).toContainText("About");
+
+  await expect(page).toHaveScreenshot();
 });
 
 test("should navigate to the about home", async ({ page }) => {
@@ -20,4 +22,6 @@ test("should navigate to the about home", async ({ page }) => {
   await expect(page).toHaveURL("http://localhost:3000");
   // The new page should contain an h1 with "About"
   await expect(page.locator("h1")).toContainText("Home");
+
+  await expect(page).toHaveScreenshot();
 });
